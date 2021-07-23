@@ -19,17 +19,21 @@ in one single interface: `PSR17Interface`.
 This package also implements a `PSR17` class which implements this interface and
 provide a basic implementation.
 
-# Requirements
+## Requirements
 
 * PHP >= 7.4
 
-# Installation
+## Installation
 
 ```bash
 composer require loophp/psr17
 ```
 
-# Usage
+This package requires also a [psr/http-factory-implementation](https://packagist.org/providers/psr/http-factory-implementation).
+
+We advise to use [nyholm/psr7](https://packagist.org/packages/nyholm/psr7) from [Tobias Nyholm](https://tnyholm.se/).
+
+## Usage
 
 ```php
 $psr17 = new \loophp\psr17\Psr17();
@@ -38,6 +42,22 @@ $response = $psr17->createResponse(200, 'hello');
 $stream = $psr17->createStream('foobar');
 ```
 
+### Integration in Symfony
+
+In `services.yaml`, add:
+
+```yaml
+services:
+    # Register loophp/psr17/Psr17 class and autowire/autoconfigure it.
+    loophp\psr17\Psr17:
+        autowire: true
+        autoconfigure: true
+
+    # Alias the service to the Psr17 interface.
+    loophp\psr17\Psr17Interface: '@loophp\psr17\Psr17'
+```
+
+A Symfony recipe will be published soon in order to do this automatically.
 
 ## Code quality, tests and benchmarks
 
@@ -81,8 +101,6 @@ For more detailed changelogs, please check [the release changelogs][17].
 [12]: http://www.phpspec.net/
 [13]: https://github.com/phpro/grumphp
 [14]: https://github.com/infection/infection
-[15]: https://github.com/phpstan/phpstan
-[16]: https://github.com/vimeo/psalm
 [15]: https://github.com/loophp/psr17/blob/master/CHANGELOG.md
 [16]: https://github.com/loophp/psr17/commits/master
 [17]: https://github.com/loophp/psr17/releases
