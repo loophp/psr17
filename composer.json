@@ -1,0 +1,58 @@
+{
+    "name": "loophp/psr17",
+    "type": "library",
+    "description": "Provides a PSR17 synthetic implementation.",
+    "keywords": [
+        "psr-17",
+        "factory"
+    ],
+    "homepage": "http://github.com/loophp/psr17",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pol Dellaiera",
+            "email": "pol.dellaiera@protonmail.com"
+        }
+    ],
+    "require": {
+        "php": ">= 7.4",
+        "psr/http-factory": "^1.0",
+        "psr/http-factory-implementation": "^1.0",
+        "psr/http-message": "^1.0",
+        "psr/http-message-implementation": "^1.0"
+    },
+    "require-dev": {
+        "drupol/php-conventions": "^5",
+        "friends-of-phpspec/phpspec-code-coverage": "^6",
+        "infection/infection": "^0.23",
+        "infection/phpspec-adapter": "^0.1.1",
+        "nyholm/psr7": "^1.4",
+        "phpspec/phpspec": "^7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "loophp\\psr17\\": "src/"
+        }
+    },
+    "scripts": {
+        "changelog-unreleased": "docker-compose run auto_changelog -c .auto-changelog -u",
+        "changelog-version": "docker-compose run auto_changelog -c .auto-changelog -v",
+        "grumphp": "./vendor/bin/grumphp run",
+        "phpspec": "./vendor/bin/phpspec run"
+    },
+    "support": {
+        "issues": "https://github.com/loophp/psr17/issues",
+        "source": "https://github.com/loophp/psr17",
+        "docs": "https://github.com/loophp/psr17"
+    },
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/drupol"
+        },
+        {
+            "type": "paypal",
+            "url": "https://www.paypal.me/drupol"
+        }
+    ]
+}
