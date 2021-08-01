@@ -11,7 +11,7 @@
 
 # PSR-17 http-factories implementation
 
-The [PSR-17 specification](https://www.php-fig.org/psr/psr-17/) is about HTTP factories.
+The [PSR-17 specification][22] is about HTTP factories.
 
 There are many PSR-17 interfaces and the purpose of this package is to regroup them all
 in one single interface: `PSR17Interface`.
@@ -29,9 +29,8 @@ provide a basic implementation.
 composer require loophp/psr17
 ```
 
-This package requires also a [psr/http-factory-implementation](https://packagist.org/providers/psr/http-factory-implementation).
-
-We advise to use [nyholm/psr7](https://packagist.org/packages/nyholm/psr7) from [Tobias Nyholm](https://tnyholm.se/).
+This package requires also a [psr/http-factory-implementation][18]. I advise to use
+[nyholm/psr7][19] from [Tobias Nyholm][20].
 
 ## Usage
 
@@ -42,9 +41,15 @@ $response = $psr17->createResponse(200, 'hello');
 $stream = $psr17->createStream('foobar');
 ```
 
-### Integration in Symfony
+### Integration with Symfony
 
-In `services.yaml`, add:
+Since the 29 of July, a [Symfony recipe][21] has been published for this package.
+
+Then, if you're using [Symfony Flex][23], then you don't have anything to do.
+When the package will be installed by Composer, Flex will install the configuration
+file in your application.
+
+If you're not using Flex, add in `services.yaml`:
 
 ```yaml
 services:
@@ -56,8 +61,6 @@ services:
     # Alias the service to the Psr17 interface.
     loophp\psr17\Psr17Interface: '@loophp\psr17\Psr17'
 ```
-
-A Symfony recipe will be published soon in order to do this automatically.
 
 ## Code quality, tests and benchmarks
 
@@ -104,3 +107,10 @@ For more detailed changelogs, please check [the release changelogs][17].
 [15]: https://github.com/loophp/psr17/blob/master/CHANGELOG.md
 [16]: https://github.com/loophp/psr17/commits/master
 [17]: https://github.com/loophp/psr17/releases
+[18]: https://packagist.org/providers/psr/http-factory-implementation
+[19]: https://packagist.org/packages/nyholm/psr7
+[20]: https://tnyholm.se/
+[21]: https://github.com/symfony/recipes-contrib/pull/1180
+[22]: https://www.php-fig.org/psr/psr-17/
+[23]: https://symfony.com/doc/current/setup/flex.html
+[24]:
