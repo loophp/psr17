@@ -35,19 +35,38 @@ This package requires also a [psr/http-factory-implementation][18]. I advise to 
 ## Usage
 
 ```php
-$psr17 = new \loophp\psr17\Psr17();
+<?php
+
+declare(strict_types=1);
+
+namespace App;
+
+use loophp\psr17\Psr17;
+use Nyholm\Psr7\Factory\Psr17Factory;
+
+include __DIR__ . '/vendor/autoload.php';
+
+// In this example, I used nyholm/psr7
+// But you could any another library of your choice.
+$requestFactory = $responseFactory = $streamFactory = $uploadedFileFactory = $uriFactory = $serverRequestFactory = new Psr17Factory();
+
+$psr17 = new Psr17($requestFactory, $responseFactory, $streamFactory, $uploadedFileFactory, $uriFactory, $serverRequestFactory);
+
 $request = $psr17->createRequest('GET', 'https://github.com');
 $response = $psr17->createResponse(200, 'hello');
 $stream = $psr17->createStream('foobar');
+$uploadedFile = $psr17->createUploadedFile($stream);
+$uri = $psr17->createUri('https://github.com/loophp/psr17');
+$serverRequest = $psr17->createServerRequest('GET', 'https://github.com/');
 ```
 
 ### Integration with Symfony
 
 Since the 29 of July, a [Symfony recipe][21] has been published for this package.
 
-Then, if you're using [Symfony Flex][23], then you don't have anything to do.
-When the package will be installed by Composer, Flex will install the configuration
-file in your application.
+Therefore, if you're using [Symfony Flex][23], then you don't have anything to do.
+When the package will be installed by Composer, Symfony Flex will install the configuration
+file in your application and automatically do the necessary services and interfaces wiring.
 
 If you're not using Flex, add in `services.yaml`:
 
@@ -61,6 +80,12 @@ services:
     # Alias the service to the Psr17 interface.
     loophp\psr17\Psr17Interface: '@loophp\psr17\Psr17'
 ```
+
+Once again, you will need to have proper wiring for the dependencies of the `Psr17` class.
+
+This is left up to the user but if you want a default implementation, you can use [nyholm/psr7][19]
+which provides also a Symfony recipe with the required dependencies so the container will
+be able to _autowire_ the `Psr17` service.
 
 ## Code quality, tests and benchmarks
 
@@ -113,4 +138,3 @@ For more detailed changelogs, please check [the release changelogs][17].
 [21]: https://github.com/symfony/recipes-contrib/pull/1180
 [22]: https://www.php-fig.org/psr/psr-17/
 [23]: https://symfony.com/doc/current/setup/flex.html
-[24]:
