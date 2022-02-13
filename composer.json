@@ -1,17 +1,32 @@
 {
     "name": "loophp/psr17",
-    "type": "library",
     "description": "Provides a PSR17 synthetic implementation.",
+    "license": "MIT",
+    "type": "library",
     "keywords": [
         "psr-17",
         "factory"
     ],
-    "homepage": "http://github.com/loophp/psr17",
-    "license": "MIT",
     "authors": [
         {
             "name": "Pol Dellaiera",
             "email": "pol.dellaiera@protonmail.com"
+        }
+    ],
+    "homepage": "http://github.com/loophp/psr17",
+    "support": {
+        "issues": "https://github.com/loophp/psr17/issues",
+        "source": "https://github.com/loophp/psr17",
+        "docs": "https://github.com/loophp/psr17"
+    },
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/drupol"
+        },
+        {
+            "type": "paypal",
+            "url": "https://www.paypal.me/drupol"
         }
     ],
     "require": {
@@ -34,25 +49,19 @@
             "loophp\\psr17\\": "src/"
         }
     },
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true,
+            "ergebnis/composer-normalize": true,
+            "phpro/grumphp": true,
+            "infection/extension-installer": true,
+            "composer/package-versions-deprecated": true
+        }
+    },
     "scripts": {
         "changelog-unreleased": "docker-compose run auto_changelog -c .auto-changelog -u",
         "changelog-version": "docker-compose run auto_changelog -c .auto-changelog -v",
         "grumphp": "./vendor/bin/grumphp run",
         "phpspec": "./vendor/bin/phpspec run"
-    },
-    "support": {
-        "issues": "https://github.com/loophp/psr17/issues",
-        "source": "https://github.com/loophp/psr17",
-        "docs": "https://github.com/loophp/psr17"
-    },
-    "funding": [
-        {
-            "type": "github",
-            "url": "https://github.com/drupol"
-        },
-        {
-            "type": "paypal",
-            "url": "https://www.paypal.me/drupol"
-        }
-    ]
+    }
 }
