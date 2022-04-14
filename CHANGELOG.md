@@ -5,7 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.1](https://github.com/loophp/psr17/compare/1.0.0...1.0.1)
+## [1.0.2](https://github.com/loophp/psr17/compare/1.0.1...1.0.2)
+
+### Commits
+
+- chore: Fix composer validation warnings. [`4c07407`](https://github.com/loophp/psr17/commit/4c07407617e849d53ae4d58ee0b4035ae8d2ea4c)
+
+## [1.0.1](https://github.com/loophp/psr17/compare/1.0.0...1.0.1) - 2022-04-14
 
 ### Merged
 
@@ -27,6 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Commits
 
+- docs: Update changelog. [`fa31882`](https://github.com/loophp/psr17/commit/fa31882e2b8295319d05cc2bb64c45f6e520a00d)
 - chore: Add `provides` and `suggest` properties. [`a7f491d`](https://github.com/loophp/psr17/commit/a7f491d8fc1995842f9fe4075f58070c9a7ae695)
 - chore: Update license. [`7eef7d9`](https://github.com/loophp/psr17/commit/7eef7d9106450872963fdcd67691ce16acf98dde)
 - chore: Normalize `composer.json` [`7ef3ac8`](https://github.com/loophp/psr17/commit/7ef3ac8780abf47a2255cbc32003ee67cde50000)
