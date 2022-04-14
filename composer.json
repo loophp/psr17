@@ -44,6 +44,13 @@
         "nyholm/psr7": "^1.4",
         "phpspec/phpspec": "^7.1"
     },
+    "provide": {
+        "psr/http-factory-implementation": "1.0",
+        "psr/http-message-implementation": "1.0"
+    },
+    "suggest": {
+        "nyholm/psr7": "A super lightweight PSR-7 implementation"
+    },
     "autoload": {
         "psr-4": {
             "loophp\\psr17\\": "src/"
