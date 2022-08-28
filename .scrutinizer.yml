@@ -17,7 +17,7 @@ build:
                     - pecl install pcov
 filter:
     paths:
-        - 'src/*'
+        - "src/*"
 
 tools:
     external_code_coverage:

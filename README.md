@@ -1,13 +1,13 @@
 [![Latest Stable Version][latest stable version]][1]
- [![GitHub stars][github stars]][1]
- [![Total Downloads][total downloads]][1]
- [![GitHub Workflow Status][github workflow status]][2]
- [![Scrutinizer code quality][code quality]][3]
- [![Type Coverage][type coverage]][4]
- [![Code Coverage][code coverage]][3]
- [![License][license]][1]
- [![Donate!][donate github]][5]
- [![Donate!][donate paypal]][6]
+[![GitHub stars][github stars]][1]
+[![Total Downloads][total downloads]][1]
+[![GitHub Workflow Status][github workflow status]][2]
+[![Scrutinizer code quality][code quality]][3]
+[![Type Coverage][type coverage]][4]
+[![Code Coverage][code coverage]][3]
+[![License][license]][1]
+[![Donate!][donate github]][5]
+[![Donate!][donate paypal]][6]
 
 # PSR-17 http-factories implementation
 
@@ -21,7 +21,7 @@ provide a basic implementation.
 
 ## Requirements
 
-* PHP >= 7.4
+- PHP >= 7.4
 
 ## Installation
 
@@ -72,13 +72,13 @@ If you're not using Flex, add in `services.yaml`:
 
 ```yaml
 services:
-    # Register loophp/psr17/Psr17 class and autowire/autoconfigure it.
-    loophp\psr17\Psr17:
-        autowire: true
-        autoconfigure: true
+  # Register loophp/psr17/Psr17 class and autowire/autoconfigure it.
+  loophp\psr17\Psr17:
+    autowire: true
+    autoconfigure: true
 
-    # Alias the service to the Psr17 interface.
-    loophp\psr17\Psr17Interface: '@loophp\psr17\Psr17'
+  # Alias the service to the Psr17 interface.
+  loophp\psr17\Psr17Interface: '@loophp\psr17\Psr17'
 ```
 
 Once again, you will need to have proper wiring for the dependencies of the `Psr17` class.
