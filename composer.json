@@ -35,6 +35,7 @@
         "psr/http-message": "^1.0"
     },
     "require-dev": {
+        "ext-pcov": "*",
         "drupol/php-conventions": "^5",
         "friends-of-phpspec/phpspec-code-coverage": "^6",
         "infection/infection": "^0.23 || ^0.24",
@@ -64,8 +65,8 @@
         }
     },
     "scripts": {
-        "changelog-unreleased": "docker-compose run auto_changelog -c .auto-changelog -u",
-        "changelog-version": "docker-compose run auto_changelog -c .auto-changelog -v",
+        "changelog-unreleased": "auto-changelog -c .auto-changelog -u",
+        "changelog-version": "auto-changelog -c .auto-changelog -v",
         "grumphp": "./vendor/bin/grumphp run",
         "phpspec": "./vendor/bin/phpspec run"
     }
