@@ -1,20 +1,17 @@
 [![Latest Stable Version][latest stable version]][1]
-[![GitHub stars][github stars]][1]
-[![Total Downloads][total downloads]][1]
+[![GitHub stars][github stars]][1] [![Total Downloads][total downloads]][1]
 [![GitHub Workflow Status][github workflow status]][2]
 [![Scrutinizer code quality][code quality]][3]
-[![Type Coverage][type coverage]][4]
-[![Code Coverage][code coverage]][3]
-[![License][license]][1]
-[![Donate!][donate github]][5]
+[![Type Coverage][type coverage]][4] [![Code Coverage][code coverage]][3]
+[![License][license]][1] [![Donate!][donate github]][5]
 [![Donate!][donate paypal]][6]
 
 # PSR-17 http-factories implementation
 
 The [PSR-17 specification][22] is about HTTP factories.
 
-There are many PSR-17 interfaces and the purpose of this package is to regroup them all
-in one single interface: `PSR17Interface`.
+There are many PSR-17 interfaces and the purpose of this package is to regroup
+them all in one single interface: `PSR17Interface`.
 
 This package also implements a `PSR17` class which implements this interface and
 provide a basic implementation.
@@ -29,8 +26,8 @@ provide a basic implementation.
 composer require loophp/psr17
 ```
 
-This package requires also a [psr/http-factory-implementation][18]. I advise to use
-[nyholm/psr7][19] from [Tobias Nyholm][20].
+This package requires also a [psr/http-factory-implementation][18]. I advise to
+use [nyholm/psr7][19] from [Tobias Nyholm][20].
 
 ## Usage
 
@@ -62,11 +59,13 @@ $serverRequest = $psr17->createServerRequest('GET', 'https://github.com/');
 
 ### Integration with Symfony
 
-Since the 29 of July, a [Symfony recipe][21] has been published for this package.
+Since the 29 of July, a [Symfony recipe][21] has been published for this
+package.
 
-Therefore, if you're using [Symfony Flex][23], then you don't have anything to do.
-When the package will be installed by Composer, Symfony Flex will install the configuration
-file in your application and automatically do the necessary services and interfaces wiring.
+Therefore, if you're using [Symfony Flex][23], then you don't have anything to
+do. When the package will be installed by Composer, Symfony Flex will install
+the configuration file in your application and automatically do the necessary
+services and interfaces wiring.
 
 If you're not using Flex, add in `services.yaml`:
 
@@ -81,26 +80,31 @@ services:
   loophp\psr17\Psr17Interface: '@loophp\psr17\Psr17'
 ```
 
-Once again, you will need to have proper wiring for the dependencies of the `Psr17` class.
+Once again, you will need to have proper wiring for the dependencies of the
+`Psr17` class.
 
-This is left up to the user but if you want a default implementation, you can use [nyholm/psr7][19]
-which provides also a Symfony recipe with the required dependencies so the container will
-be able to _autowire_ the `Psr17` service.
+This is left up to the user but if you want a default implementation, you can
+use [nyholm/psr7][19] which provides also a Symfony recipe with the required
+dependencies so the container will be able to _autowire_ the `Psr17` service.
 
 ## Code quality, tests and benchmarks
 
-Every time changes are introduced into the library, [Github][11] run the tests and the benchmarks.
+Every time changes are introduced into the library, [Github][11] run the tests
+and the benchmarks.
 
-The library has tests written with [PHPSpec][12].
-Feel free to check them out in the `spec` directory. Run `composer phpspec` to trigger the tests.
+The library has tests written with [PHPSpec][12]. Feel free to check them out in
+the `spec` directory. Run `composer phpspec` to trigger the tests.
 
-Before each commit some inspections are executed with [GrumPHP][13], run `./vendor/bin/grumphp run` to check manually.
+Before each commit some inspections are executed with [GrumPHP][13], run
+`./vendor/bin/grumphp run` to check manually.
 
-[PHPInfection][14] is used to ensure that your code is properly tested, run `composer infection` to test your code.
+[PHPInfection][14] is used to ensure that your code is properly tested, run
+`composer infection` to test your code.
 
 ## Contributing
 
-Feel free to contribute by sending Github pull requests. I'm quite responsive :-)
+Feel free to contribute by sending Github pull requests. I'm quite responsive
+:-)
 
 ## Changelog
 
@@ -110,18 +114,27 @@ For more detailed changelogs, please check [the release changelogs][17].
 
 [1]: https://packagist.org/packages/loophp/psr17
 [2]: https://github.com/loophp/psr17/actions
-[latest stable version]: https://img.shields.io/packagist/v/loophp/psr17.svg?style=flat-square
-[github stars]: https://img.shields.io/github/stars/loophp/psr17.svg?style=flat-square
-[total downloads]: https://img.shields.io/packagist/dt/loophp/psr17.svg?style=flat-square
-[github workflow status]: https://img.shields.io/github/workflow/status/loophp/psr17/Unit%20tests?style=flat-square
-[code quality]: https://img.shields.io/scrutinizer/quality/g/loophp/psr17/master.svg?style=flat-square
+[latest stable version]:
+  https://img.shields.io/packagist/v/loophp/psr17.svg?style=flat-square
+[github stars]:
+  https://img.shields.io/github/stars/loophp/psr17.svg?style=flat-square
+[total downloads]:
+  https://img.shields.io/packagist/dt/loophp/psr17.svg?style=flat-square
+[github workflow status]:
+  https://img.shields.io/github/workflow/status/loophp/psr17/Unit%20tests?style=flat-square
+[code quality]:
+  https://img.shields.io/scrutinizer/quality/g/loophp/psr17/master.svg?style=flat-square
 [3]: https://scrutinizer-ci.com/g/loophp/psr17/?branch=master
-[type coverage]: https://img.shields.io/badge/dynamic/json?style=flat-square&color=color&label=Type%20coverage&query=message&url=https%3A%2F%2Fshepherd.dev%2Fgithub%2Floophp%2Fpsr17%2Fcoverage
+[type coverage]:
+  https://img.shields.io/badge/dynamic/json?style=flat-square&color=color&label=Type%20coverage&query=message&url=https%3A%2F%2Fshepherd.dev%2Fgithub%2Floophp%2Fpsr17%2Fcoverage
 [4]: https://shepherd.dev/github/loophp/psr17
-[code coverage]: https://img.shields.io/scrutinizer/coverage/g/loophp/psr17/master.svg?style=flat-square
+[code coverage]:
+  https://img.shields.io/scrutinizer/coverage/g/loophp/psr17/master.svg?style=flat-square
 [license]: https://img.shields.io/packagist/l/loophp/psr17.svg?style=flat-square
-[donate github]: https://img.shields.io/badge/Sponsor-Github-brightgreen.svg?style=flat-square
-[donate paypal]: https://img.shields.io/badge/Sponsor-Paypal-brightgreen.svg?style=flat-square
+[donate github]:
+  https://img.shields.io/badge/Sponsor-Github-brightgreen.svg?style=flat-square
+[donate paypal]:
+  https://img.shields.io/badge/Sponsor-Paypal-brightgreen.svg?style=flat-square
 [5]: https://github.com/sponsors/drupol
 [6]: https://www.paypal.me/drupol
 [10]: https://github.com/symfony/psr-http-message-bridge

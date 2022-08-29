@@ -5,16 +5,9 @@ build:
             environment:
                 php:
                     version: 8.1
-            dependencies:
-                before:
-                    - pecl install pcov
-            tests:
-                override:
-                    - php-scrutinizer-run
-        coverage:
-            dependencies:
-                before:
-                    - pecl install pcov
+                    pecl_extensions:
+                        - pcov
+
 filter:
     paths:
         - "src/*"
