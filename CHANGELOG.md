@@ -5,10 +5,30 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.4](https://github.com/loophp/psr17/compare/1.0.3...1.0.4)
+## [1.0.5](https://github.com/loophp/psr17/compare/1.0.4...1.0.5)
+
+### Merged
+
+- build(deps): Update psr/http-message requirement || ^2.0 [`#46`](https://github.com/loophp/psr17/pull/46)
+- build(deps): Bump cachix/install-nix-action from 18 to 20 [`#39`](https://github.com/loophp/psr17/pull/39)
+- chore(deps): update actions/stale action to v7 [`#32`](https://github.com/loophp/psr17/pull/32)
+- chore(deps): update actions/stale action to v6 [`#30`](https://github.com/loophp/psr17/pull/30)
+- build(deps-dev): Update infection/phpspec-adapter requirement || ^0.2.0 [`#31`](https://github.com/loophp/psr17/pull/31)
+- chore(deps): update dependency infection/infection to ^0.23 || ^0.24 || ^0.26 [`#27`](https://github.com/loophp/psr17/pull/27)
+- chore(deps): add renovate.json [`#26`](https://github.com/loophp/psr17/pull/26)
+- build(deps): Bump shivammathur/setup-php from 2.18.1 to 2.22.0 [`#25`](https://github.com/loophp/psr17/pull/25)
+- build(deps): Bump cachix/install-nix-action from 17 to 18 [`#24`](https://github.com/loophp/psr17/pull/24)
 
 ### Commits
 
+- chore: update static files [`a0e153b`](https://github.com/loophp/psr17/commit/a0e153b29639f24ced52864059c5021ef89d6d56)
+- chore: Update static files. [`8811189`](https://github.com/loophp/psr17/commit/881118913df42a488ed5a0715dd7589f9a6367d7)
+
+## [1.0.4](https://github.com/loophp/psr17/compare/1.0.3...1.0.4) - 2022-08-28
+
+### Commits
+
+- docs: Update CHANGELOG. [`83a363a`](https://github.com/loophp/psr17/commit/83a363a32ca5eb44e69fda0deaa027e76dc8cbe8)
 - Prettify codebase. [`bbd7167`](https://github.com/loophp/psr17/commit/bbd7167df28c6aab10784f9754c0cc371fff4671)
 
 ## [1.0.3](https://github.com/loophp/psr17/compare/1.0.2...1.0.3) - 2022-08-28
