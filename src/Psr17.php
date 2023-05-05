@@ -16,26 +16,14 @@ use const UPLOAD_ERR_OK;
 
 final class Psr17 implements Psr17Interface
 {
-    private RequestFactoryInterface $requestFactory;
-
-    private ResponseFactoryInterface $responseFactory;
-
-    private ServerRequestFactoryInterface $serverRequestFactory;
-
-    private StreamFactoryInterface $streamFactory;
-
-    private UploadedFileFactoryInterface $uploadedFileFactory;
-
-    private UriFactoryInterface $uriFactory;
-
-    public function __construct(RequestFactoryInterface $requestFactory, ResponseFactoryInterface $responseFactory, StreamFactoryInterface $streamFactory, UploadedFileFactoryInterface $uploadedFileFactory, UriFactoryInterface $uriFactory, ServerRequestFactoryInterface $serverRequestFactory)
-    {
-        $this->requestFactory = $requestFactory;
-        $this->responseFactory = $responseFactory;
-        $this->streamFactory = $streamFactory;
-        $this->uploadedFileFactory = $uploadedFileFactory;
-        $this->uriFactory = $uriFactory;
-        $this->serverRequestFactory = $serverRequestFactory;
+    public function __construct(
+        private readonly RequestFactoryInterface $requestFactory,
+        private readonly ResponseFactoryInterface $responseFactory,
+        private readonly StreamFactoryInterface $streamFactory,
+        private readonly UploadedFileFactoryInterface $uploadedFileFactory,
+        private readonly UriFactoryInterface $uriFactory,
+        private readonly ServerRequestFactoryInterface $serverRequestFactory
+    ) {
     }
 
     public function createRequest(string $method, $uri): RequestInterface
