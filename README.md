@@ -1,9 +1,10 @@
 [![Latest Stable Version][latest stable version]][1]
-[![GitHub stars][github stars]][1] [![Total Downloads][total downloads]][1]
-[![GitHub Workflow Status][github workflow status]][2]
-[![Type Coverage][type coverage]][4] [![Code Coverage][code coverage]][3]
-[![License][license]][1] [![Donate!][donate github]][5]
-[![Donate!][donate paypal]][6]
+[![GitHub stars][github stars]][1]
+[![Total Downloads][total downloads]][1]
+[![GitHub Workflow Status][github workflow status]][github actions link]
+[![Type Coverage][type coverage]][4]
+[![License][license]][1]
+[![Donate!][donate github]][5]
 
 # PSR-17 http-factories implementation
 
@@ -119,8 +120,9 @@ For more detailed changelogs, please check [the release changelogs][17].
   https://img.shields.io/github/stars/loophp/psr17.svg?style=flat-square
 [total downloads]:
   https://img.shields.io/packagist/dt/loophp/psr17.svg?style=flat-square
+[github actions link]: https://github.com/loophp/psr17/actions
 [github workflow status]:
-  https://img.shields.io/github/workflow/status/loophp/psr17/Unit%20tests?style=flat-square
+  https://img.shields.io/github/actions/workflow/status/loophp/psr17/tests.yml?branch=master&style=flat-square
 [type coverage]:
   https://img.shields.io/badge/dynamic/json?style=flat-square&color=color&label=Type%20coverage&query=message&url=https%3A%2F%2Fshepherd.dev%2Fgithub%2Floophp%2Fpsr17%2Fcoverage
 [4]: https://shepherd.dev/github/loophp/psr17
