@@ -5,7 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.5](https://github.com/loophp/psr17/compare/1.0.4...1.0.5)
+## [1.0.6](https://github.com/loophp/psr17/compare/1.0.5...1.0.6)
+
+### Commits
+
+- autofix with prettier [`1637036`](https://github.com/loophp/psr17/commit/1637036aee6621721f5ce660060772248ecf0e82)
+- chore: fix badges [`6373415`](https://github.com/loophp/psr17/commit/6373415ee7d0e1cf08afc60749ba1fb378473696)
+- chore: get rid of scrutinizer [`784e1ad`](https://github.com/loophp/psr17/commit/784e1adbc00fb4765f5c8654b700691b2b441b2d)
+- autofix with prettier [`2d06076`](https://github.com/loophp/psr17/commit/2d06076083265da40211379363bccac37ecde915)
+- ci: fix builds [`47ee882`](https://github.com/loophp/psr17/commit/47ee882da20a6ac75ac50fd65e36afd2cdaf6d5a)
+- refactor: now only for `php &gt;= 8.1` [`32cb128`](https://github.com/loophp/psr17/commit/32cb1285c6fab5f4442ff1be0ca4f8eeb4a07422)
+
+## [1.0.5](https://github.com/loophp/psr17/compare/1.0.4...1.0.5) - 2023-05-04
 
 ### Merged
 
@@ -21,6 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Commits
 
+- docs: update changelog [`641f246`](https://github.com/loophp/psr17/commit/641f2464af9d581b1cdbe1a5a1f5e98db98d3a6e)
 - chore: update static files [`a0e153b`](https://github.com/loophp/psr17/commit/a0e153b29639f24ced52864059c5021ef89d6d56)
 - chore: Update static files. [`8811189`](https://github.com/loophp/psr17/commit/881118913df42a488ed5a0715dd7589f9a6367d7)
 
