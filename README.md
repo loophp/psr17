@@ -1,9 +1,7 @@
 [![Latest Stable Version][latest stable version]][1]
-[![GitHub stars][github stars]][1]
-[![Total Downloads][total downloads]][1]
+[![GitHub stars][github stars]][1] [![Total Downloads][total downloads]][1]
 [![GitHub Workflow Status][github workflow status]][github actions link]
-[![Type Coverage][type coverage]][4]
-[![License][license]][1]
+[![Type Coverage][type coverage]][4] [![License][license]][1]
 [![Donate!][donate github]][5]
 
 # PSR-17 http-factories implementation
